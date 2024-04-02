@@ -2,6 +2,7 @@ import { Column, Entity, Index, JoinColumn, ManyToOne, OneToMany } from "typeorm
 import BaseEntity from './Entity';
 import { User } from "./User";
 import { Expose } from "class-transformer";
+import Post from "./Post";
 
 @Entity("subs")
 export default class Sub extends BaseEntity {
@@ -28,8 +29,8 @@ export default class Sub extends BaseEntity {
   @JoinColumn( {name: "username", referencedColumnName:"username"})
   user: User;
 
-  @OneToMany(() => postMessage, (post) => post.sub)
-  post: Post[]
+  @OneToMany(() => Post, (post) => post.sub)
+  posts: Post[]
 
   @Expose()
     get imageUrl(): string {
