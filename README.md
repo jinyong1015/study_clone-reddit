@@ -7,4 +7,4 @@
 4. 데이터베이스와 애플리케이션 연결 (Typeorm 사용)
 5. Entity 생성하기
 - User, Sub, Post, Vote, Comment Entity
-6. 회원 가입 페이지 UI 생성하기
+6. 회원 가입 페이지 UI 생성하기!
